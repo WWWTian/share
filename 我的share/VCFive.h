@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VCFive : UIViewController
+@interface VCFive : UIViewController<UITableViewDelegate,UITableViewDataSource>
+
+
+@property (nonatomic,strong) UITableView * tableView;
+@property(strong, nonatomic)NSArray* contentArray;
+@property(strong, nonatomic)NSArray* imageArray;
 
 @end

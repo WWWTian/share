@@ -10,4 +10,13 @@
 
 @interface VCSecond : UIViewController
 
+{
+    UITextField* searchBar;
+    UIButton* btn42;
+    UIButton* btn43;
+    UIButton* btn44;
+    UIButton* btn45;
+   
+}
+
 @end

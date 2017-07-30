@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VCFive43 : UIViewController
+@interface VCFive43 : UIViewController<UITableViewDelegate,UITableViewDataSource>
 
 @end

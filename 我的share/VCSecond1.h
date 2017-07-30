@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VCSecond1 : UIViewController
+@interface VCSecond1 : UIViewController<UITableViewDelegate,UITableViewDataSource>
 
 @end

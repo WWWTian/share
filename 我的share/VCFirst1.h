@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VCFirst1 : UIViewController
+@interface VCFirst1 : UIViewController<UITableViewDelegate,UITableViewDataSource>
+
+
+@property (nonatomic,strong) UITableView * tableView;
 
 @end

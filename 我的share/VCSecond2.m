@@ -231,8 +231,8 @@
     [btn3 setImage:[UIImage imageNamed:@"444"] forState:UIControlStateSelected];
   
     
-    [btn3 setTitleEdgeInsets:UIEdgeInsetsMake(5,-10 , 3, 40)];
-    [btn3 setImageEdgeInsets:UIEdgeInsetsMake(0,75, 2, 0)];
+    [btn3 setTitleEdgeInsets:UIEdgeInsetsMake(5,-30 , 3, 40)];
+    [btn3 setImageEdgeInsets:UIEdgeInsetsMake(0,70, 0, 0)];
 //    btn3.backgroundColor = [UIColor colorWithRed:213/255.0 green:210/255.0 blue:212/255.0 alpha:1];
     btn3.backgroundColor = [UIColor whiteColor];
 
@@ -247,18 +247,33 @@
     btn3.layer.masksToBounds = YES;
     [self.view addSubview:btn3];
     UIImageView* image120 = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"120"]];
-    image120.frame = CGRectMake(65, 0, 1, 30);
+    image120.frame = CGRectMake(70, 0, 1, 30);
     [btn3 addSubview:image120];
     [btn3 addTarget:self action:@selector(pressA:) forControlEvents:UIControlEventTouchDown];
     
+    _view = [[UIView alloc]init];
+    _view.backgroundColor = [UIColor colorWithRed:213/255.0 green:210/255.0 blue:212/255.0 alpha:1];
+    _view.frame = CGRectMake(250, 175,70 ,50 );
     
-//    _tableView = [[UITableView alloc]init];
-//    _tableView.sectionFooterHeight = 0;
-//    _tableView.rowHeight = 60;
-//    _tableView.frame = CGRectMake(270, 130, 100, 40);
-//    _tableView.delegate = self;
-//    _tableView.dataSource = self;
-//    [self.view addSubview:_tableView];
+    UILabel* label401 = [[UILabel alloc]init];
+    label401.text = @"设计资料";
+    label401.textColor = [UIColor blackColor];
+    label401.frame = CGRectMake(0, 0, 70, 50/3);
+    label401.font = [UIFont systemFontOfSize:13];
+    UILabel* label402 = [[UILabel alloc]init];
+    label402.text = @"设计师观点";
+    label402.textColor = [UIColor blackColor];
+    label402.frame = CGRectMake(0, 50/3, 70, 50/3);
+    label402.font = [UIFont systemFontOfSize:13];
+    UILabel* label403 = [[UILabel alloc]init];
+    label403.text = @"设计教程";
+    label403.textColor = [UIColor blackColor];
+    label403.font = [UIFont systemFontOfSize:13];
+    label403.frame = CGRectMake(0, 50/3*2, 70, 50/3);
+    [_view addSubview:label401];
+    [_view addSubview:label402];
+    [_view addSubview:label403];
+    
     
     
 }
@@ -270,15 +285,22 @@
     btn.selected = !btn.selected;
     if ([btn.backgroundColor isEqual:[UIColor whiteColor]]){
         btn.backgroundColor = [UIColor colorWithRed:213/255.0 green:210/255.0 blue:212/255.0 alpha:1];
+    
         
+   [self.view addSubview:_view];
+        
+        _view.hidden = NO;
      
         
     }else{
         btn.backgroundColor = [UIColor whiteColor];
         
-        
+        _view.hidden = YES;
         
     }
+    
+    
+    
 
 }
 

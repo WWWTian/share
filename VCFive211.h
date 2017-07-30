@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VCFive211 : UIViewController
+@interface VCFive211 : UIViewController<UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>
+
 
 @end

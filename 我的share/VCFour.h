@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VCFour : UIViewController
+@interface VCFour : UIViewController<UITableViewDelegate,UITableViewDataSource>
 
 @end

@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VCSecond2 : UIViewController
-
+@interface VCSecond2 : UIViewController<UITextViewDelegate,UITableViewDelegate,UITableViewDataSource>
+{
+    UITextView* _myTextView;
+    UITextView* _myTextView1;
+    UILabel* placeHoderLable1;
+    UILabel* placeHoderLable;
+    UITableView* _tableView;
+    NSMutableDictionary* _state;
+    NSMutableDictionary* _headImageView;
+    UIView* _view;
+    
+}
 @end

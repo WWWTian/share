@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VCFirst : UIViewController
+@interface VCFirst : UIViewController<UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>
+
+@property (nonatomic, strong)NSTimer* rotateTimer;  //让视图自动切换
+@property (nonatomic, strong)UIPageControl *myPageControl;
+@property (nonatomic,strong)UITableView *tableView;
+
 
 @end

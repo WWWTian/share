@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "LaunchViewController.h"
+
+
 
 @interface AppDelegate ()
 
@@ -17,6 +20,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    
+    LaunchViewController* launchView = [[LaunchViewController alloc]init];
+
+    
+    self.window.rootViewController = launchView;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

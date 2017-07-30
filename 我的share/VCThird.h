@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VCThird : UIViewController
+@interface VCThird : UIViewController<UITableViewDelegate,UITableViewDataSource>
+
+@property (strong,nonatomic)UIButton * tmpBtn;
+@property (strong,nonatomic)UIButton * btn1;
+@property (strong,nonatomic)UIButton * btn2;
+@property (strong,nonatomic)UIButton * btn3;
 
 @end
